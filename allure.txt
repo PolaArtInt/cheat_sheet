@@ -1,0 +1,37 @@
+allure:
+windows x64
+install java:
+скачать установочный файл java: https://www.java.com/winonline_installer/
+or:
+скачать jdk-17: https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-17
+установить
+добавить JAVA_HOME or JRE_HOME: https://mkyong.com/java/how-to-set-java_home-on-windows-10/
+добавить path: https://www.youtube.com/watch?v=5bwEKlSoC90
+проверить:
+java -version
+echo %JRE_HOME%
+or:
+echo %JAVA_HOME%
+install scoop:
+iwr -useb get.scoop.sh | iex
+scoop help
+install allure:
+scoop install allure
+allure --version
+install selene and allure-pytest:
+pip install selene - опционально
+pip install allure-pytest
+import allure
+run tests:
+pytest -v -s --alluredir='allure-results'
+or:
+python -m pytest --alluredir allure-results
+generate results and open allure page:
+allure serve allure-results
+allure generate allure-results  - создаёт страницу
+allure generate allure-results '--clean' - переписать результаты
+fixtures:
+@allure.link('')
+@allure.feature('')
+@allure.story('')
+with allure.step('')

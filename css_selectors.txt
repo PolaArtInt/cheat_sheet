@@ -1,0 +1,50 @@
+# CSS SELECTORS:
+
+# To find X-path or CSS-selectors in Chrome:
+# dev tools >> ctrl+f above the console - to enable DOM searching in the panel
+
+
+# Примеры с сайтa: 'https://suninjuly.github.io/cats.html'
+# [ ] — команда фильтрации для атрибутов тегов
+# * — команда выбора всех элементов
+# ' ' — пробел разделяет элемент с потомком любого уровня (.row img, .col-sm-4 p)
+# Поиск по tagname: tagname (div - выберет все div, h1, p... соответственно)
+# Поиск по id: #id (#bullet)
+# Поиск по class: .classname,  (.jumbotron-heading, .navbar)
+# Поиск прямого потомка: parent>child
+#       (div>h1, div.card>img#bullet)
+# Поиск сиблингов (элементов на одном уровне вложенности): — выбрать всех сиблингов sibling_1
+#       sibling_1~sibling_2 (#bullet~div, .card-text~div)
+# Поиск следующего элемента: elem+next_elem — выбрать next_elem, следующий за elem
+#       (h1+article, section+div)
+# Поиск среди сиблингов по порядковому номеру: elem:nth-child(n)
+#       (div:nth-child(3), .card:nth-child(1))
+# Поиск первого/последнего элемента: elem:first-child, elem:last-child
+#       (.card:first-child, .card:last-child)
+# Поиск n-ного элемента с конца: elem:nth-last-child(n)
+#       (.btn-group:nth-last-child(2), .card:nth-last-child(1))
+# Поиск первого/последнего из элементов: elem:first-of-type/elem:last-of-type
+#       (.card:first-of-type, .card-body:last-of-type)
+# Поиск элемента, не содержащего потомков: elem:empty
+#       (div:empty, meta:empty)
+# Поиск каждого чётного/нечётного элемента: elem:nth-of-type(even/odd)
+#       (.col-sm-4:nth-of-type(even), meta:nth-of-type(odd), link:nth-of-type(even))
+# Поиск каждого n-ного элемента: elem:nth-of-type(n)
+#       (link:nth-of-type(4), div:nth-of-type(3))
+# Поиск каждого n-ного элемента, начиная с m: elem:nth-of-type(2n+m)
+#       (link:nth-of-type(2n+3))
+# Поиск элемента без сиблингов: elem:only-child, elem :only-child
+#       (div :only-child и div:only-child - разные элементы!)
+# Поиск с использованием двух (и более) классов элемента: elem.classname1.classname2
+#       (.navbar-brand.d-flex, .card.mb-4.box-shadow)
+# Поиск всех элементов, кроме х: elem:not(х)
+#       (div:not(.card), img:not(#bullet))
+# Поиск по названию атрибута: [attrname] или tagname[attrname]
+#       ([for], [id], [data] или img[id], div[class])
+# Поиск по названию и значению атрибута: [attr='val']
+#       ([id='bullet'], [value='Cat memes'], [name='bullet-cat'], img[name='bullet-cat'], [class='col-sm-4'])
+# [attr^='val'] — все элем. со значением аттр., начинающегося с 'val' ([class^='ca'], [id^='bul'])
+# [attr$='val'] — все элем. со значением аттр., оканчивающемся на 'val' ([type$='t'], [class$='tn'])
+# [attr*='val'] — все элем. со значением аттр., содерж. 'val' ([type*='utt'], [class*='btn'])
+
+# https://flukeout.github.io/ - тренажёр для CSS-селекторов:

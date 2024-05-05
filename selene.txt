@@ -1,0 +1,61 @@
+SELENE
+
+# imports of selene:
+# from selene import browser, by, be, have
+# from selene.support.shared.jquery_style import s, ss
+# from selene.support.shared import config
+
+# imports of selenium:
+# from selenium.webdriver.chrome.webdriver import WebDriver
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.support import expected_conditions as ec
+#
+# driver = WebDriver()
+# wait = WebDriverWait(driver, timeout=10)
+
+# selene locator vs. selenium locator tuple:
+# loc = 'css_selector or xpath_selector' vs. locator = (tuple)
+
+# selene syntax vs. selenium syntax:
+# browser.open(url) = driver.get(url)
+# browser.close() = driver.quit()
+# browser.driver.title = driver.title
+# browser.driver.current_url = driver.current_url
+
+# s(loc) = driver.find_element(*locator) - s=search
+# s(by_link_text('active')).click() - find link by text and click
+
+# ss(loc) = driver.find_elements(*locator) - collection
+# list_of_elements = ss(loc) - collection
+# list_of_texts = ('text1', 'text2', 'text3')
+# list_of_elements.findBy(text(task_text)).find('text').click()
+# list_of_elements.filterBy(visible).should(have.texts(*list_of_texts))
+
+# ss(loc).should(have.exact_texsts('text1', 'text2')) - search collection of elements
+# .should_have() - explicit wait from the box
+
+# s(loc).set('text1') - search element with implicit wait, (waits element to be visible)
+# s(loc).set('text2').press_enter()
+# .set('') - search starts here
+
+# set your own timeout (4 seconds by default):
+# s(loc).should(be.enabled) - will wait until 4 seconds
+# s(loc).should(be.enabled, timeout=10) - set new timeout of 10 sec.
+# or:
+# config.timeout = 10
+# s(loc).should(be.enabled)
+
+# s(loc).should(be.enabled) = driver.find_element(*locator).is_enabled()
+# s(loc).should(be.clickable) = driver.wait.until(ec.element_to_be_clickable(locator))
+# and other methods via dot... s(loc). see tooltips...
+# and other methods via dot... s(loc).should(be. ) see tooltips...
+# and other methods via dot... s(loc).should(have. ) see tooltips...
+
+# some methods: element.method()
+# .hover() = hovers on the element
+# .click() = .click()
+# .type() = .send_keys()
+# .press_enter() = presses enter
+# .delete() = deletes chosen element
+# .findBy(text('')) - collection search by text (instead of xpath locators)
+# .toggle('text') = toggles the element with given text

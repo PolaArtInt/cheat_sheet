@@ -1,0 +1,52 @@
+# XPATH (XML Path Language) SELECTORS:
+
+# To find X-path or CSS-selectors in Chrome:
+# dev tools >> ctrl+f above the console - to enable DOM searching in the panel
+
+# Примеры с сайтa: 'https://suninjuly.github.io/cats.html'
+# x_path = //tagname[@attr = 'val'] (attrs: id, name, classname, etc.)
+# // — current element selection
+#       (//h1 = /html/body/h1)
+# //tagname - выбрать все элементы по названию HTML-тега
+#       (//h1, //div, //p)
+# [ ] — это команда фильтрации для атрибутов тегов
+# * — команда выбора всех элементов //* или //*/elem
+#       (//div/*[@class="jumbotron-heading"], //*/img)
+# //parent/child — выбирает элементы child, являющиеся прямыми потомками parent
+#       (//div/img)
+# //parent//child — выбирает элементы child, являющиеся потомками parent любой степени вложенности
+#       (//div//p)
+# //*[@attribute], //elem[@id='idname'] - выбор элемента по атрибуту
+#       (//div[@class], //img[@id='bullet'])
+# //*[contains(@attr,'val')] - выбрать всё, что содержит значение val атрибута attr
+#       (//div[contains(@class,'small')])
+# (//elem)[index] по индексу
+#       (//*[3], //div[5], //p[1], //img[1])
+# //elem/*[last()] - найти последний элем.
+#       ((//div)[last()], //div/*[last()], (//div)[last()-3])
+# //elem[text()='text sample'] по полному совпадению текста
+#       (//p[text()='cat'] Регистр важен!)
+# //elem[contains(text(), 'text part')] по частичному совпадению текста или атрибута
+#       (//p[contains(text(), 'cat')], //div[contains(@class, 'navbar')])
+# //el1|//el2 - комбинирование элементов
+#       (//h1|//title, //p|//img)
+# //el1[@attr='value' and @otherAttribute='other value']/el2 - and, or, not
+#       (//button[@class='btn' or @type='button'], //img[@id='bullet' and @name='bullet-cat'])
+# //*[starts-with(@attr,'val')] - все элем. со значением аттр., начинающегося с 'val'
+#       (//img[starts-with(@id, 'bu')])
+# //*[substring(@attribute, string-length(@attribute) - string-length('end text') +1) = 'end text']
+#       ()
+# find current node’s immediate parent: //node[@attr_name = 'attr_val']/ancestor::parent_node
+#       (//p[@class = 'card-text']/ancestor::div, //p[@class='card-text']/ancestor::div[@class = 'card-body'])
+# find current node’s child: //node[@attr_name = 'attr_val']/child::child_node
+#       (//div[@class = 'card-body']/child::p[@class='card-text'])
+# find current node’s children and sub-children: //node[@attr_name = 'attr_val']/descendant::node
+#       (//div[@class = 'card-body']/descendant::p)
+# find current node’s next element: //node[@attr_name = 'attr_val']/following::node
+#       (//div[@class = 'card-body']/following::p)
+# find current node’s following sibling: //el1/following-sibling::el2
+# (//node[@attr_name = 'attr_val']/following-sibling::node,
+# //div[@class = 'btn-group']/child::button/following-sibling::button)
+# find current node’s preceding sibling: /el1/preceding-sibling::el2
+
+# https://topswagcode.com/xpath/ - тренажёр для x-path-селекторов:

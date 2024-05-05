@@ -1,0 +1,21 @@
+Инструкция - подсказка для работы с гитом:
+клонировать проект - взять ссылку, создать новый проект в pycharm через VCS
+установить venv -   python -m venv venv (для windows)
+активировать venv - venv\Scripts\activate (путь свой)
+pip install selenium - установка selenium в проект
+pip install pytest - установка pytest в проект
+скачать requirements.txt - pip install -r requirements.txt
+git pull из main - подтянуть изменения с удалённого репо
+git branch <branch_name> - создать свою ветку
+git checkout <branch_name> - перейти в неё
+создать файл с тестом
+commit and push - комит и пуш из ветки (авторизоваться в гите или через токен, если нет приглашения), сделать постоянный токен (generate token)
+создать Pull Request - PR
+TC_000.000.000/ Item > Sub item > TC title - в PR ввести название как у карточки
+добавить название со ссылкой на trello в описание PR
+в trello добавить ссылку на PR
+назначить ревьюэров
+дождаться двух аппрувов
+squash and merge - слить ветку с main, если нет противоречий
+удалить ветку - git branch -d branch_name (перейти сначала на main - git checkout main)
+git pull - подтянет изменения с проекта

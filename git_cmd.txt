@@ -1,0 +1,25 @@
+Git cmd:
+cd.. - выйти на уровень выше
+cd <directory_name> - сменить директорию
+touch <file_name> - создать файл
+main branch - главная ветка локального репо
+main(origin) - главная ветка удалённого репо
+git status - проверить состояние файлов
+git add . - добавить все файлы в отслеживание VCS
+git add 'filename.py' - добавить файл в отслеживание VCS
+git commit -m 'comment' - сохранить изменения в локальном репо
+git rm --cached FILENAME - отменить отслеживание файла VCS
+git branch - показать все ветки
+git branch branchname - создать ветку
+git branch -d branchname - удалить локальную ветку (команда из main)
+git checkout branchname - переключиться на эту ветку
+git merge branchname - соединить ветку main с новой веткой (команда из main)
+git push --set-upstream origin branchname - отправить изменения в удалённый репо с локальной ветки
+git push --set-upstream origin main - ресет главной локальной ветки
+git push - отправить изменения в удалённый репо с локального main (команда из main)
+git push -u origin main - изменения попадают в главную удалённую main ветку минуя pull request, вместо другой ветки! (не делать так!)
+git pull - стянуть изменения с удалённого репо
+pull request - создать запрос в github для соединения веток, появляется в гите для просмотра противоречий
+merge - слить ветку с main
+squash and merge - слить ветку с main одним коммитом
+confirm and merge

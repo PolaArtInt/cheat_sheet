@@ -1,0 +1,11 @@
+pytest cmd:
+cd <directory_name>
+pytest - проранить без данных все тесты в директории
+pytest file_name.py - проранить конкретный файл с тестами
+pytest file_name.py:test_name - проранить конкретный тест в файле
+pytest -v - увидеть PASSED/FAILED статус в консоле
+pytest -s - увитеть print() в тестах
+pytest -s -v - увидеть детали тестов
+pytest --markers - посмотреть все метки
+pytest -m xfail - просмотр тестов по метке <mark name>
+@pytest.mark.xfail - обёртка для тест-функции
